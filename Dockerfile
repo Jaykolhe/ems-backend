@@ -1,0 +1,14 @@
+
+FROM openjdk:21-jdk-slim
+
+
+WORKDIR /app
+
+
+COPY target/ems-backend-0.0.1-SNAPSHOT.jar app.jar
+
+# Run the application
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+
+
+EXPOSE 8080
